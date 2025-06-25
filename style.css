@@ -33,3 +33,50 @@ body {
     font-weight: bold;
   }
   
+  /* 全体初期設定 */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: white;
+    font-family: sans-serif;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* ローディング用のオーバーレイ */
+  #loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: clip-path 1s ease-in-out;
+    clip-path: circle(100%);
+  }
+  
+  /* 円 */
+  .circle {
+    width: 120px;
+    height: 120px;
+    border: 5px solid white;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  /* パーセンテージ */
+  .percent {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* ローディング終了時のエフェクト（JSで付与） */
+  .loader-finish {
+    clip-path: circle(0% at center);
+  }
